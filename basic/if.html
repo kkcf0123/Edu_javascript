@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+
+     -->
+    <script>
+      const date = new Date();
+      console.log(date);
+      const hour = date.getHours();
+      if (hour < 12) {
+        console.log("AM");
+      } else {
+        console.log("PM");
+      }
+
+      let input = prompt("enter num");
+      console.log(typeof input);
+
+      if (input > 0) {
+        console.log("+");
+      } else {
+        console.log("-");
+      }
+    </script>
+  </body>
+</html>
