@@ -8,41 +8,25 @@
       body {
         background-color: green;
       }
-      body {
-        background-color: blue;
-      }
     </style> -->
   </head>
   <body>
-    <!-- <form action="" method="get">
-        <input type="radio" name="color" id="" /> 녹색 
-        <input type="radio" name="color" id="" /> 파랑</form> -->
     <form action="" method="get">
-      <input type="radio" name="gender" id="" value="male" /> male <input type="radio" name="gender" id="" value="female" /> female
+      <input type="radio" name="color" id="" value="green" /> 녹색 <input type="radio" name="color" id="" value="blue" /> 파랑
     </form>
     <script>
-      // click radio set background color
-      // list임, node 형태로 수집
-      //   const radio1 = document.querySelectorAll("input[name = 'color']");
-      //   radio1[0].addEventListener("click", () => (document.body.style.backgroundColor = "green"));
-      //   radio1[1].addEventListener("click", () => (document.body.style.backgroundColor = "blue"));
-      //   radio1.forEach((color) => {
-      //     color.addEventListener("click", (e) => {
-      //       document.body.style.backgroundColor = e.target.value;
-      //     });
-      //   });
-      //   const radio = document.querySelectorAll("input[name = 'gender']");
-      //   radio.forEach((gender) => {
-      //     gender.addEventListener("click", (e) => {
-      //       document.body.style.backgroundColor = e.target.value;
-      //     });
-      //   });
+      // 라디오를 클릭하면 해당 색상을 body 배경색으로 변경
+      const colors = document.querySelectorAll("input[name='color']");
 
-      // event bubbling
-      const form = document.querySelector("form");
-      form.addEventListener("click", (e) => console.log(e.target.value));
-      // e.terget 이벤트가 발생한 대상 / e.currentTarget
-      console.log("currentTarget", e.currentTarget);
+      //   colors[0].addEventListener("click", () => (document.body.style.backgroundColor = "green"));
+      //   colors[1].addEventListener("click", () => (document.body.style.backgroundColor = "blue"));
+
+      colors.forEach((color) => {
+        color.addEventListener("click", (e) => {
+          //   console.log(e.target.value);
+          document.body.style.backgroundColor = e.target.value;
+        });
+      });
     </script>
   </body>
 </html>

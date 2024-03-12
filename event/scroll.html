@@ -11,6 +11,18 @@
       crossorigin="anonymous"
     />
     <style>
+      body {
+        height: 4000px;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+      }
+      .navbar-brand {
+        font-size: 45px;
+        transition: all 1s; /* css 속성이 변경될 때 부드럽게 변경되도록 */
+      }
       span {
         cursor: pointer;
       }
@@ -52,6 +64,16 @@
         // if (e.target.classList.contains("bg-dark")) {
         // } else {
         // }
+      });
+
+      // 페이지 스크롤바를 500px 이상 내리면 로고 폰트 사이즈 줄이기
+      const navbar = document.querySelector(".navbar-brand");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          navbar.style.fontSize = "20px";
+        } else {
+          navbar.style.fontSize = "45px";
+        }
       });
     </script>
   </body>
